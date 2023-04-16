@@ -30,8 +30,8 @@ class SheetRewards:
         sheet.update_cell(cell, 1, timestamp)
         sheet.update_cell(cell, 2, reward['validator_address'])
         for r in reward['reward']:
-            sheet.update_cell(cell.row, 3, reward['amount'])
-            sheet.update_cell(cell.row, 4, reward['denom'])
+            sheet.update_cell(cell, 3, reward['amount'])
+            sheet.update_cell(cell, 4, reward['denom'])
         
         
       #sheet.update('A2:B3', [[1, 2], [3, 4]])
