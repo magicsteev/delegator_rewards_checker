@@ -12,4 +12,14 @@ class GetRewards:
         self.denom = denom
 
         self.rewards_url = f"/cosmos/distribution/v1beta1/delegators/{self.wallet_address}/rewards"
-        print("End Cons")
+
+    def get_pending_rewards(self):
+        try:
+                rewards = get(i + self.rewards_url, timeout=5).json()
+                rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
+        except Exception as e:
+                print(e)
+                pass #Rest server down, probably. Try the next one.
+
+        return rewards
+
