@@ -11,7 +11,10 @@ client = gspread.authorize(creds)
 # Ouvrir la feuille de calcul
 sheet = client.open('test').sheet1
 data = ["Zayn","Malik","12","20"] 
-sheet.insert_rows(data)
+
+print("celllval:", sheet.acell('B1').value)
+
+#sheet.insert_rows(data)
 
 
 # Online Python compiler (interpreter) to run Python online.
