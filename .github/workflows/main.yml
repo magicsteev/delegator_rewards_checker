@@ -8,6 +8,8 @@ jobs:
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
+      with:
+        ref: v2.4.4   # Version de l'action à utiliser
     - name: Install dependencies
       run: pip install -r requirements.txt # s'il y a un fichier requirements.txt avec les dépendances
     - name: Run script
