@@ -6,11 +6,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
       with:
-        ref: v2.4.4   # Version de l'action à utiliser
+        python-version: "3.10"
     - name: Install dependencies
-      run: pip install -r requirements.txt # s'il y a un fichier requirements.txt avec les dépendances
-    - name: Run script
-      run: python test.py # remplacez `script.py` par le nom de votre script
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Test with pytest
+      run: |
+        pytest
