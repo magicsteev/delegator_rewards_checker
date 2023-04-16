@@ -25,8 +25,8 @@ class SheetRewards:
         # Trouver la première ligne vide dans la première colonne
         #cell = sheet.find('')
 
-        sheet.update_cell(cell.row, 1, timestamp)
-        sheet.update_cell(cell.row, 2, reward['validator_address'])
+        sheet.update_cell(cell, 1, timestamp)
+        sheet.update_cell(cell, 2, reward['validator_address'])
         for r in reward['reward']:
             sheet.update_cell(cell.row, 3, reward['amount'])
             sheet.update_cell(cell.row, 4, reward['denom'])
