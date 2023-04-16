@@ -10,7 +10,7 @@ client = gspread.authorize(creds)
 
 # Ouvrir la feuille de calcul
 sheet = client.open('CosmosRewards').sheet1
-data = [    {'Nom': 'Durand', 'Prénom': 'Jean', 'Âge': 42},    {'Nom': 'Dupont', 'Prénom': 'Marie', 'Âge': 28},    {'Nom': 'Martin', 'Prénom': 'Pierre', 'Âge': 35},]
+data = = ["Zayn","Malik",12,20] 
 sheet.insert_rows(data)
 
 
