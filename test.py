@@ -10,4 +10,4 @@ r=a.get_pending_rewards()
 print("new_rewards:", r)
 
 b=SheetRewards(r)
-t=b.updtsheet(b)
+t=b.updtsheet()
