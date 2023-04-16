@@ -17,9 +17,10 @@ class GetRewards:
         try:
                 rewards = get(i + self.rewards_url, timeout=5).json()
                 rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
+                return rewards
         except Exception as e:
                 print(e)
                 pass #Rest server down, probably. Try the next one.
 
-        return rewards
+        return 0
 
