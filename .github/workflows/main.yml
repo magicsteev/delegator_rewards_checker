@@ -1,0 +1,14 @@
+name: Run script once
+on:
+  workflow_dispatch: # déclenché manuellement
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+    - name: Install dependencies
+      run: pip install -r requirements.txt # s'il y a un fichier requirements.txt avec les dépendances
+    - name: Run script
+      run: python test.py # remplacez `script.py` par le nom de votre script
