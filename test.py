@@ -11,7 +11,7 @@ client = gspread.authorize(creds)
 # Ouvrir la feuille de calcul
 sheet = client.open('test').sheet1
 data = ["Zayn","Malik","12","20"] 
-
+sheet.update('A1:B2', [[1, 2], [3, 4]])
 print("celllval:", sheet.acell('B1').value)
 
 #sheet.insert_rows(data)
