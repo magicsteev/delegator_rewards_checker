@@ -13,6 +13,6 @@ class SheetRewards:
 
 
     def updtsheet(self):
-      sheet = client.open('CosmosRewards').sheet1
-      sheet.update('A1:B2', [[1, 2], [3, 4]])
+      sheet = self.client.open('CosmosRewards').sheet1
+      sheet.update('A2:B3', [[1, 2], [3, 4]])
       print("sheetupdated:")
