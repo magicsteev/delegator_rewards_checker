@@ -16,7 +16,7 @@ class SheetRewards:
     def updtsheet(self):
       sheet = self.client.open('CosmosRewards').sheet1
       str_list = list(filter(None, sheet.col_values(1)))
-      cell=str(len(str_list)+1)
+      cell=len(str_list)+1
       print("Cell : ", cell)
       timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
       #Remplir le tableau à partir de la première ligne disponible
