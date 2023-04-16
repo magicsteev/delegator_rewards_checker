@@ -15,7 +15,7 @@ class GetRewards:
 
     def get_pending_rewards(self):
         try:
-                rewards = get(self.rest_servers_prod + self.rewards_url, timeout=5)
+                rewards = get(self.rest_servers_prod + self.rewards_url, timeout=5).json()
                 #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
                 return rewards
         except Exception as e:
