@@ -33,6 +33,7 @@ class SheetRewards:
             sheet.update_cell(cell, 3, r['amount'])
             sheet.update_cell(cell, 4, r['denom'])
         
+        cell=cell+1
         
       #sheet.update('A2:B3', [[1, 2], [3, 4]])
       print("sheetupdated:")
