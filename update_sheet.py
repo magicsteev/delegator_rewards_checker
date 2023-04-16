@@ -9,7 +9,7 @@ class SheetRewards:
         # Définir les informations d'identification pour accéder à votre compte Google Sheet
         scope = ['https://spreadsheets.google.com/feeds', 'https://www.googleapis.com/auth/drive']
         creds = ServiceAccountCredentials.from_json_keyfile_name('cosmosrewards-d891d19a5027.json', scope)
-        client = gspread.authorize(creds)
+        self.client = gspread.authorize(creds)
 
 
     def updtsheet(self):
