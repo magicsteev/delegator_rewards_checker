@@ -9,7 +9,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_name('cosmosrewards-d891d19a
 client = gspread.authorize(creds)
 
 # Ouvrir la feuille de calcul
-sheet = client.open('CosmosRewards').sheet1
+sheet = client.open('test').sheet1
 data = ["Zayn","Malik","12","20"] 
 sheet.insert_rows(data)
 
