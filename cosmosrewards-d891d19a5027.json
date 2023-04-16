@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cosmosrewards",
+  "private_key_id": "d891d19a5027e8124ebc53449fd02a75a67df7e8",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC4MLBUtKtlh53B\nRV14luRBwKOKlt7mxWm9zWJ7BzJm82wpJNwyitHnt1DrL2JB5kiG094naZclfiVa\nS6TBjKug2KstG59XNeY+pUIeDsH2DLEgLaARav+NuNcI5Bo8Z6mtxNqiHTYjmRzV\n7ZJ8NZbCmpd7CcQYDUR0x+0kbiOwkFG0pKp/bbrir7hoeKFG1eNDNQRUdtVEA9jb\n3uH8ZyP94FBvahY71/LokTqYjKwO/KL8esxEPWJRrIilnJn2KXsfI40vtDu30ulY\nk2WLFpa+a5R9TOUJGUYIKRDR8dKWldWspUwqtsUOyCQCtZoKh1I1J7WIhVwpIKFq\nGzt1J+qfAgMBAAECggEALrfy0dltq/gFFJOyjLbBOMhS8wEnkqM6GfFxbEE8EI7n\nvVvjGlLJwRtnQ/Al3Q87EC/HJnoK43CmqsuLA6jZk5fBe1SJSwaZ2wPxzEvz+KPp\nfX71HdXk8h6TNGcfHHkyuae3yOzd4ZOhk8WJpUW2cq/hgkzM10juNyzKwrXJCaxy\nt20h6gt5bi0QN7QUF18IM6+NesxUdnVGnJTCEM3CG8h53yZwx37LqdtV2VGdwX7w\nQZNZUafIB1t1kXolz01ZIriPtIS1f3S6K+b+/Y5ATfEL/YzPLQJI9+PfeuKZTxmu\nAaxMWJreL84+xbi3Ql0+sKiY+EMxlNWvTDmoneXAEQKBgQDxVAE4uOV2LT19EUGV\n8WIRQq7Qzngx7GW0iaFXAYGpSJSWWMKIDleraDQ/VU7U7ySjp8IT883NJLNuNAT8\n9uE54Sx7OQumA2MDWT+gaVCERK6S9J1R2aVwi2yR2wgB694XYKi9RaEnyNHK6h13\n0Z/WXdpNYstV3J6c/1iv1HVOKQKBgQDDY2W+0ht9CIISnEAOf9UQkAdI0RMGK2hJ\nKT0twMspVv2PX6mqk7RQi/mfe15hT1vIMJVBLVJPv69GcYj2jwbT0k5SbZq9V8Ec\nNlmfs1l4l5/+Ju1xPuw4BBepCr9uK732pCoM7sx7NnaANqXytgJHju6D/kybhx4V\nFONllI57hwKBgG2/cj7FdzTjJg92hYkXGS4YUUAMZYTuqOINpR3YRYsiwtAM1Yri\nWuRMo1YaCZu0lckHRa+lNHaStjbr2UjhTVPxHzV6n92DtMeVEuZ0fnVodqvGKrVK\ncX5ZKaq7HU0iYwHmp1ZMEBnzrdTF21jeL/5g+CIxR59okYl8ZmywBhjhAoGAJR+p\noUwCdQs8y5Rsh1S6gt8awzcWSkHNGrl/KkZLU5t3qdofPo254OP3ldm24P5XDf5N\nHYki7owZHWVNBKvAPFblErxIfllCE74v4SwOf98vQvbafn3aG/qLFE86eBBPk6E1\nbCejKnX6pfm8JhV28Wmy39ldbN+LU64YVqCXQdkCgYEAkcE98gIjdJy0ppkGcGxm\n9aYw3lFGhyy2u/BqQ9As7cK+Zq3fYwiy79RXcLrcLDkgy9gRgdnzcYEleFctKpnv\nHPJHpRNvVx7Kn9OPP4qkqYfC56WmInYYZi3SfVOxpd4ITF1My0mYEx02v067dmrB\n2jsQK5Xc0wlk1+IucPJqUx8=\n-----END PRIVATE KEY-----\n",
+  "client_email": "googlesheetapi@cosmosrewards.iam.gserviceaccount.com",
+  "client_id": "116691586794497498976",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googlesheetapi%40cosmosrewards.iam.gserviceaccount.com"
+}
