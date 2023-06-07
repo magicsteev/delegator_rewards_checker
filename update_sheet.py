@@ -13,6 +13,10 @@ class SheetRewards:
         creds = ServiceAccountCredentials.from_json_keyfile_name('cosmosrewards-d891d19a5027.json', scope)
         self.client = gspread.authorize(creds)
         self.dt = datetime
+    def isok(self):
+        gc = gspread.service_account("cosmosrewards-d891d19a5027.json")
+        workbooks = [file["name"] for file in gc.list_all_spreadsheets()]
+        print("Validator address: ", workbooks)
     def updtsheet(self):
       sheet = self.client.open('CosmosRewards').sheet1
       str_list = list(filter(None, sheet.col_values(1)))
