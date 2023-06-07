@@ -20,7 +20,8 @@ r=a.get_pending_rewards()
 print("new_rewards:", r)
 
 b=SheetRewards(r, timestamp)
-t=b.updtsheet()
+b.isok()
+#t=b.updtsheet()
 
 
 #EVMOS
