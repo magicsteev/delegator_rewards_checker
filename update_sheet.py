@@ -15,7 +15,8 @@ class SheetRewards:
         self.dt = datetime
     def isok(self):
         sht1 = gc.open_by_key('1VrwncispOQKJRSCWeF8clYNyjVuVSa47QSCJFmxR4dQ')
-        val = sht1.acell('B1').value
+        ws= sht1.sheet1
+        val = ws.acell('B1').value
         print("Cell : ", cell)
     def updtsheet(self):
       sheet = self.client.open('CosmosRewards').sheet1
