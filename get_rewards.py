@@ -44,12 +44,13 @@ def jsonRewards_to_table(data):
     rewards = data["rewards"]
     for reward in rewards:
         validator_address = reward["validator_address"]
+        val = get_validator_name(validator_address)
         reward_data = reward["reward"]
 
         for entry in reward_data:
             denom = entry["denom"]
             amount = entry["amount"]
 
-            table.append([validator_address, denom, amount])
+            table.append([val, denom, amount])
     
     return table
