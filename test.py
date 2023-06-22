@@ -2,7 +2,7 @@ from get_rewards import GetRewards
 from update_sheet import SheetRewards
 from dump_to_csv import DumpRewards
 import csv
-import datetime
+
 
 # Online Python compiler (interpreter) to run Python online.
 # Write Python 3 code in this online editor and run it.
