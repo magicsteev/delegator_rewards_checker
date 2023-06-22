@@ -17,16 +17,16 @@ class GetRewards:
         try:
                 rewards = get(self.rest_servers_prod + self.rewards_url, timeout=5).json()
                 #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
-                return jsonRewards_to_table(rewards)
+                return jsonRewards_to_table(rewards,self.rest_servers_prod)
         except Exception as e:
                 print(e)
                 pass #Rest server down, probably. Try the next one.
 
         return 0
         
-def get_validator_name(valoper):
+def get_validator_name(valoper,endpoint):
     try:
-            url = self.rest_servers_prod + "/staking/v1beta1/validators" + valoper
+            url = endpoint + "/staking/v1beta1/validators" + valoper
             print ("calling : " + url)
             val = get(url, timeout=5).json()
             #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
@@ -37,14 +37,14 @@ def get_validator_name(valoper):
 
     return 0
         
-def jsonRewards_to_table(data):
+def jsonRewards_to_table(data,rest_endpoint):
     table = []
     
     # Traitement des récompenses des validateurs
     rewards = data["rewards"]
     for reward in rewards:
         validator_address = reward["validator_address"]
-        val = get_validator_name(validator_address)
+        val = get_validator_name(validator_address,rest_endpoint)
         reward_data = reward["reward"]
     
         for entry in reward_data:
