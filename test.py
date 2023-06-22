@@ -11,8 +11,10 @@ timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 #ATOM
 a=GetRewards("https://api-cosmoshub-ia.cosmosia.notional.ventures/", "cosmos1lpu6xj6qsu5aqxnserzxjteaq56j86lcl9hchy", "uatom")
 r=a.get_pending_rewards()
-v=a.get_validator_name("cosmosvaloper1gpx52r9h3zeul45amvcy2pysgvcwddxrgx6cnv")
 print("new_rewards:", r)
+exit
+v=a.get_validator_name("cosmosvaloper1gpx52r9h3zeul45amvcy2pysgvcwddxrgx6cnv")
+
 
 b=SheetRewards(r, timestamp)
 t=b.updtsheet()
