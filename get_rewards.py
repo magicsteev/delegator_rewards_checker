@@ -37,20 +37,20 @@ class GetRewards:
 
         return 0
         
-def jsonRewards_to_table(data):
-    table = []
-
-    # Traitement des récompenses des validateurs
-    rewards = data["rewards"]
-    for reward in rewards:
-        validator_address = reward["validator_address"]
-        val = get_validator_name(validator_address)
-        reward_data = reward["reward"]
-
-        for entry in reward_data:
-            denom = entry["denom"]
-            amount = entry["amount"]
-
-            table.append([val, denom, amount])
+    def jsonRewards_to_table(data):
+        table = []
     
-    return table
+        # Traitement des récompenses des validateurs
+        rewards = data["rewards"]
+        for reward in rewards:
+            validator_address = reward["validator_address"]
+            val = get_validator_name(validator_address)
+            reward_data = reward["reward"]
+    
+            for entry in reward_data:
+                denom = entry["denom"]
+                amount = entry["amount"]
+    
+                table.append([val, denom, amount])
+        
+        return table
