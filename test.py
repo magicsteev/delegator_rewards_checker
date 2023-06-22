@@ -1,4 +1,4 @@
-from getrewards import GetRewards
+from getrewards import Get_Rewards
 from update_sheet import SheetRewards
 import csv
 import datetime
