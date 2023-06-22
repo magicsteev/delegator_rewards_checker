@@ -22,25 +22,24 @@ class SheetRewards:
         for sheet in sheets:
             print(sheet.title)
     
-    def updtsheet(self):
+    def updtsheet(self,rewards):
       sheet = self.client.open('CosmosRewards').sheet1
       str_list = list(filter(None, sheet.col_values(1)))
       cell=len(str_list)+1
       print("Cell : ", cell)
       
       #Remplir le tableau à partir de la première ligne disponible
-      json_obj = json.loads(self.rewards)
-      for reward in json_obj['rewards']:
-        print("Validator address: ", reward['validator_address'])
+      
+      for reward in rewards:
+        print("Validator address: ", reward[0])
         
         # Trouver la première ligne vide dans la première colonne
         #cell = sheet.find('')
 
         sheet.update_cell(cell, 1, self.dt)
-        sheet.update_cell(cell, 2, reward['validator_address'])
-        for r in reward['reward']:
-            sheet.update_cell(cell, 3, r['amount'])
-            sheet.update_cell(cell, 4, r['denom'])
+        sheet.update_cell(cell, 2, reward[0])
+        sheet.update_cell(cell, 3, reward[1])
+        sheet.update_cell(cell, 4, reward[2])
         
         cell=cell+1
         
