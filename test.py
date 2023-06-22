@@ -5,6 +5,7 @@ import datetime
 
 # Online Python compiler (interpreter) to run Python online.
 # Write Python 3 code in this online editor and run it.
+# Tu trouves les endpoints sur https://cosmos.directory/
 print("Hello world")
 timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 #ATOM
