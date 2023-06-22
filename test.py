@@ -13,8 +13,6 @@ r=a.get_pending_rewards()
 print("new_rewards:", r)
 
 b=SheetRewards(r, timestamp)
-b.isok()
-exit()
 t=b.updtsheet()
 #OSMO
 a=GetRewards("https://rest.cosmos.directory/osmosis/", "osmo1lpu6xj6qsu5aqxnserzxjteaq56j86lch7ygpk", "uosmo")
