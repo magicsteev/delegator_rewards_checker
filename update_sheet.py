@@ -14,10 +14,14 @@ class SheetRewards:
         self.client = gspread.authorize(creds)
         self.dt = datetime
     def isok(self):
-        sht1 = gc.open_by_key('1VrwncispOQKJRSCWeF8clYNyjVuVSa47QSCJFmxR4dQ')
-        ws= sht1.sheet1
-        val = ws.acell('B1').value
-        print("Cell : ", cell)
+
+        spreadsheet = self.client.open('CosmosRewards')
+
+        # Obtenir la liste des onglets
+        sheets = spreadsheet.worksheets()
+        for sheet in sheets:
+            print(sheet.title)
+    
     def updtsheet(self):
       sheet = self.client.open('CosmosRewards').sheet1
       str_list = list(filter(None, sheet.col_values(1)))
