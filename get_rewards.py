@@ -1,4 +1,5 @@
 from requests import get
+import json
 
 class GetRewards:
 
