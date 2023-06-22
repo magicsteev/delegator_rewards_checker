@@ -27,10 +27,14 @@ class GetRewards:
 def get_validator_name(valoper,endpoint):
     try:
             url = endpoint + "cosmos/staking/v1beta1/validators/" + valoper
-            print ("calling : " + url)
             val = get(url, timeout=5).json()
+            # Convertir le JSON en dictionnaire Python
+            data = json.loads(json_data)
+
+            # Accéder à la propriété 'validator.description.moniker'
+            moniker = data['validator']['description']['moniker']
             #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
-            return val
+            return moniker
     except Exception as e:
             print(e)
             pass #Rest server down, probably. Try the next one.
