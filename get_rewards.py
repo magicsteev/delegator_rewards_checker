@@ -24,7 +24,7 @@ class GetRewards:
 
         return 0
         
-def get_validator_name(self,valoper):
+def get_validator_name(valoper):
     try:
             url = self.rest_servers_prod + "/staking/v1beta1/validators" + valoper
             print ("calling : " + url)
