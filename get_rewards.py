@@ -24,33 +24,33 @@ class GetRewards:
 
         return 0
         
-    def get_validator_name(self,valoper):
-        try:
-                url = self.rest_servers_prod + "/staking/v1beta1/validators" + valoper
-                print ("calling : " + url)
-                val = get(url, timeout=5).json()
-                #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
-                return val
-        except Exception as e:
-                print(e)
-                pass #Rest server down, probably. Try the next one.
+def get_validator_name(self,valoper):
+    try:
+            url = self.rest_servers_prod + "/staking/v1beta1/validators" + valoper
+            print ("calling : " + url)
+            val = get(url, timeout=5).json()
+            #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
+            return val
+    except Exception as e:
+            print(e)
+            pass #Rest server down, probably. Try the next one.
 
-        return 0
+    return 0
         
-    def jsonRewards_to_table(data):
-        table = []
+def jsonRewards_to_table(data):
+    table = []
     
-        # Traitement des récompenses des validateurs
-        rewards = data["rewards"]
-        for reward in rewards:
-            validator_address = reward["validator_address"]
-            val = get_validator_name(validator_address)
-            reward_data = reward["reward"]
+    # Traitement des récompenses des validateurs
+    rewards = data["rewards"]
+    for reward in rewards:
+        validator_address = reward["validator_address"]
+        val = get_validator_name(validator_address)
+        reward_data = reward["reward"]
     
-            for entry in reward_data:
-                denom = entry["denom"]
-                amount = entry["amount"]
+        for entry in reward_data:
+            denom = entry["denom"]
+            amount = entry["amount"]
     
-                table.append([val, denom, amount])
+            table.append([val, denom, amount])
         
-        return table
+    return table
