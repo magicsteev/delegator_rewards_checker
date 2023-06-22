@@ -26,7 +26,7 @@ class GetRewards:
         
 def get_validator_name(valoper,endpoint):
     try:
-            url = endpoint + "/staking/v1beta1/validators" + valoper
+            url = endpoint + "cosmos/staking/v1beta1/validators/" + valoper
             print ("calling : " + url)
             val = get(url, timeout=5).json()
             #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
