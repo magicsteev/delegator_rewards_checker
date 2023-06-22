@@ -19,7 +19,7 @@ class DumpRewards:
             writer.writerows(tab)
 
         token = '5885875594:AAETBQxIg4EQrKjAL2sdhrWNVKUM3v-J4QM'
-        chat_id = '@magic_steeve'
+        chat_id = '890885070'
         fichier = nom_fichier
         bot = telegram.Bot(token=token)
         bot.send_document(chat_id=chat_id, document=open(fichier, 'rb'))
