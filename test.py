@@ -1,5 +1,6 @@
 from get_rewards import GetRewards
 from update_sheet import SheetRewards
+from dump_to_csv import DumpRewards
 import csv
 import datetime
 
