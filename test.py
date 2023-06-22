@@ -13,8 +13,7 @@ a=GetRewards("https://api-cosmoshub-ia.cosmosia.notional.ventures/", "cosmos1lpu
 r=a.get_pending_rewards()
 b=SheetRewards(r, timestamp)
 print("new_rewards:", r)
-exit()
-#t=b.updtsheet()
+t=b.updtsheet()
 #OSMO
 a=GetRewards("https://rest.cosmos.directory/osmosis/", "osmo1lpu6xj6qsu5aqxnserzxjteaq56j86lch7ygpk", "uosmo")
 r=a.get_pending_rewards()
