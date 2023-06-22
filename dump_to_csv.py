@@ -1,6 +1,7 @@
 
 import csv
 import datetime
+import telegram
 
 
 class DumpRewards:
@@ -16,3 +17,12 @@ class DumpRewards:
         with open(nom_fichier, 'w', newline='') as fichier:
             writer = csv.writer(fichier)
             writer.writerows(tab)
+
+        token = '5885875594:AAETBQxIg4EQrKjAL2sdhrWNVKUM3v-J4QM'
+        chat_id = '@magic_steeve'
+        fichier = nom_fichier
+        bot = telegram.Bot(token=token)
+        bot.send_document(chat_id=chat_id, document=open(fichier, 'rb'))
+
+        # Remplacez les valeurs suivantes par vos propres informations
+
