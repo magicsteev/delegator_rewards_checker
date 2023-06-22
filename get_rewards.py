@@ -17,7 +17,7 @@ class GetRewards:
         try:
                 rewards = get(self.rest_servers_prod + self.rewards_url, timeout=5).json()
                 #rewards = float([i['amount'] for i in rewards['total'] if i['denom'] == self.denom][0])
-                return rewards
+                return jsonRewards_to_table(rewards)
         except Exception as e:
                 print(e)
                 pass #Rest server down, probably. Try the next one.
@@ -36,4 +36,20 @@ class GetRewards:
                 pass #Rest server down, probably. Try the next one.
 
         return 0
+        
+def jsonRewards_to_table(data):
+    table = []
 
+    # Traitement des récompenses des validateurs
+    rewards = data["rewards"]
+    for reward in rewards:
+        validator_address = reward["validator_address"]
+        reward_data = reward["reward"]
+
+        for entry in reward_data:
+            denom = entry["denom"]
+            amount = entry["amount"]
+
+            table.append([validator_address, denom, amount])
+    
+    return table
