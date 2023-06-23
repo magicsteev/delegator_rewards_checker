@@ -16,26 +16,26 @@ class DumpRewards:
         user="default",
         password="iTr5WyGdCo1p"
         )
-    # Création d'un curseur pour exécuter les requêtes SQL
-    cursor = conn.cursor()
-    
-    # Parcours des lignes du fichier CSV
-    for row in tab:
-        # Extraction des valeurs de la ligne
-        timestamp = t
-        validator_name = row[0]
-        denom = row[1]
-        amount = row[2]
+        # Création d'un curseur pour exécuter les requêtes SQL
+        cursor = conn.cursor()
         
-        # Requête SQL d'insertion des données
-        query = "INSERT INTO rewards (timestamp, validator_name, denom, amount) VALUES (%s, %s, %s, %s);"
+        # Parcours des lignes du fichier CSV
+        for row in tab:
+            # Extraction des valeurs de la ligne
+            timestamp = t
+            validator_name = row[0]
+            denom = row[1]
+            amount = row[2]
+            
+            # Requête SQL d'insertion des données
+            query = "INSERT INTO rewards (timestamp, validator_name, denom, amount) VALUES (%s, %s, %s, %s);"
+            
+            # Exécution de la requête avec les valeurs de la ligne
+            cursor.execute(query, (timestamp, validator_name, denom, amount))
         
-        # Exécution de la requête avec les valeurs de la ligne
-        cursor.execute(query, (timestamp, validator_name, denom, amount))
-    
-    # Validation des modifications dans la base de données
-    conn.commit()
-    
-    # Fermeture du curseur et de la connexion à la base de données
-    cursor.close()
-    conn.close()
+        # Validation des modifications dans la base de données
+        conn.commit()
+        
+        # Fermeture du curseur et de la connexion à la base de données
+        cursor.close()
+        conn.close()
