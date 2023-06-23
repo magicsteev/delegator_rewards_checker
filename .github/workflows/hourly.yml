@@ -1,4 +1,4 @@
-name: Run script daily
+name: Run script hourly
 on:
   schedule:
     - cron: "0 * * * *"
