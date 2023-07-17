@@ -44,4 +44,8 @@ DumpRewards(r,timestamp)
 
 #STARGAZE
 #https://rest.cosmos.directory/stargaze
+a=GetRewards("https://rest.cosmos.directory/akash", "stars1lpu6xj6qsu5aqxnserzxjteaq56j86lcteq9u4", "ustars")
+r=a.get_pending_rewards()
+DumpRewards(r,timestamp)
+
 #SOMMELIER
